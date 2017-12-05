@@ -25,6 +25,19 @@ function exist(el){
 
 jQuery(document).ready(function($) {
 
+    var mi = 0;
+    $('.hidden-menu__nav li').each(function(index, el) {
+      $(this).css({
+        '-webkit-transition-delay': mi+'s',
+        '-o-transition-delay': mi+'s',
+        '-moz-transition-delay': mi+'s',
+        'transition-delay': mi+'s'
+      });
+      var link = $(this).find('a');
+      link.attr( 'data-letters', link.text() );
+      mi += 0.1;
+    });
+
      // parallax
     var initialLeft = '',
         initialTop = '';
@@ -114,7 +127,7 @@ jQuery(document).ready(function($) {
     $('.js-toggle-menu').on('click', function(event) {
         event.preventDefault();
         $(this).toggleClass('is-active');
-        $(this).siblings('header').toggleClass('open');
+        $('.hidden-menu').toggleClass('open');
     });
 
 
