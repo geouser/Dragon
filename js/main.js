@@ -25,7 +25,37 @@ function exist(el){
 
 jQuery(document).ready(function($) {
 
-    //$(".header").headroom();
+     // parallax
+    var initialLeft = '',
+        initialTop = '';
+
+    $('.parallax').mouseenter(function(event) {
+        initialLeft = event.pageX;
+        initialTop = event.pageY;
+    });
+
+    $('.parallax').mouseleave(function() {
+        $(this).addClass('notActive').find('.layer').css({
+            transform:'translateX(0px) translateY(0px)'
+        });
+    });
+
+    $('.parallax').mousemove(function(e) {
+        var leftDif = initialLeft - e.pageX,
+            topDif = initialTop - e.pageY;
+
+        $(this).removeClass('notActive').find('.layer-1').css({
+            transform:'translateX(' + leftDif / 60 + 'px) translateY(' + topDif / 20 + 'px)'
+        });
+        $(this).find('.layer-2').css({
+            transform:'translateX(' + leftDif / 120 + 'px) translateY(' + topDif / 40 + 'px)'
+        });
+        $(this).find('.layer-3').css({
+            transform:'translateX(' + (leftDif / 140) * -1 + 'px) translateY(' + (topDif / 80)  * -1 + 'px)'
+        });
+
+    });
+    // ========== end parallax
     
     /*---------------------------
                                   ADD CLASS ON SCROLL
