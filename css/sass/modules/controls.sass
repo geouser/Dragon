@@ -10,16 +10,30 @@
     font-size: 14px 
     padding-top: 17px
     padding-bottom: 17px  
+    transition: all .2s 
+    border: 2px solid transparent 
     
     &--blue
         background-color: $blue 
+        border-color: $blue 
+        &:hover
+            background-color: transparent
+            color: $blue 
         
     &--brown
         background-color: $brown-light 
+        border-color: $brown-light 
         font-size: 13px 
+        &:hover
+            background-color: transparent
+            color: $brown-light 
         
     &--grey
         background-color: #E5E5E5 
+        border-color: #E5E5E5 
+        &:hover
+            background-color: transparent
+            color: #E5E5E5 
     
 
 
