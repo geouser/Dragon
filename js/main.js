@@ -25,7 +25,7 @@ function exist(el){
 
 jQuery(document).ready(function($) {
 
-    $(".header").headroom();
+    //$(".header").headroom();
     
     /*---------------------------
                                   ADD CLASS ON SCROLL
@@ -120,6 +120,21 @@ jQuery(document).ready(function($) {
 
 
 
+    $('.video-slider').slick({
+        arrows: true,
+        dots: false
+    })
+
+
+    var time = new Date();
+    var time = new Date( $('.presale-timer').attr('data-end') );
+    $('.presale-timer').countdown({
+        until: time,
+        padZeroes: true
+    }); 
+
+
+
     /*---------------------------
                                   Form submit
     ---------------------------*/
@@ -152,51 +167,5 @@ jQuery(document).ready(function($) {
         });
     });
 
-
-
-    /*---------------------------
-                                  Google map init
-    ---------------------------*/
-    var map;
-    function googleMap_initialize() {
-        var lat = $('#map_canvas').data('lat');
-        var long = $('#map_canvas').data('lng');
-
-        var mapCenterCoord = new google.maps.LatLng(lat, long);
-        var mapMarkerCoord = new google.maps.LatLng(lat, long);
-
-        var styles = [];
-
-        var mapOptions = {
-            center: mapCenterCoord,
-            zoom: 16,
-            //draggable: false,
-            disableDefaultUI: true,
-            scrollwheel: false,
-            mapTypeId: google.maps.MapTypeId.ROADMAP
-        };
-
-        map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
-
-        var styledMapType=new google.maps.StyledMapType(styles,{name:'Styled'});
-        map.mapTypes.set('Styled',styledMapType);
-        map.setMapTypeId('Styled');
-
-        var markerImage = new google.maps.MarkerImage('images/location.png');
-        var marker = new google.maps.Marker({
-            icon: markerImage,
-            position: mapMarkerCoord, 
-            map: map,
-            title:"Site Title"
-        });
-        
-        $(window).resize(function (){
-            map.setCenter(mapCenterCoord);
-        });
-    }
-
-    if ( exist( '#map_canvas' ) ) {
-        googleMap_initialize();
-    }
 
 }); // end file

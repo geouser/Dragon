@@ -348,6 +348,12 @@ $gutter: 15px
 
 
 @media only screen and (min-width: 576px) 
+    .row.reverse-sm
+        -ms-flex-direction: row-reverse
+        -webkit-box-orient: horizontal
+        -webkit-box-direction: reverse
+        flex-direction: row-reverse
+    
     .col-sm-auto 
         -ms-flex: 0 0 auto
             flex: 0 0 auto
@@ -579,6 +585,12 @@ $gutter: 15px
 
 
 @media only screen and (min-width: 768px) 
+    .row.reverse-md
+        -ms-flex-direction: row-reverse
+        -webkit-box-orient: horizontal
+        -webkit-box-direction: reverse
+        flex-direction: row-reverse
+    
     .col-md-auto 
         -ms-flex: 0 0 auto
             flex: 0 0 auto
@@ -809,6 +821,13 @@ $gutter: 15px
 
 
 @media only screen and (min-width: 992px) 
+
+    .row.reverse-lg
+        -ms-flex-direction: row-reverse
+        -webkit-box-orient: horizontal
+        -webkit-box-direction: reverse
+        flex-direction: row-reverse
+    
     .col-lg-auto 
         -ms-flex: 0 0 auto
             flex: 0 0 auto
@@ -1039,6 +1058,13 @@ $gutter: 15px
 
 
 @media only screen and (min-width: 1200px) 
+
+    .row.reverse-xl
+        -ms-flex-direction: row-reverse
+        -webkit-box-orient: horizontal
+        -webkit-box-direction: reverse
+        flex-direction: row-reverse
+    
     .col-xl-auto 
         -ms-flex: 0 0 auto
             flex: 0 0 auto
@@ -1284,4 +1310,4 @@ $gutter: 15px
         max-width: 960px
     // Extra large devices (large desktops, 1200px and up)
     @media (min-width: 1200px)
-        max-width: 1160px
+        max-width: 1140px

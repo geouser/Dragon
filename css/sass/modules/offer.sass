@@ -1,63 +1,222 @@
 .offer
-	height: 800px
-	max-height: 100%
-	+flex($d: column, $ai: center, $j: center)
-	
-	background-image: url("../images/offer-main.jpg")
-	background-position: 50% 50%
-	-webkit-background-size: cover
-	-o-background-size: cover
-	background-size: cover
-	
-	h1
-		margin-bottom: 40px
-		font-size: 70px
-		color: #FFF
-		text-shadow: 0 0 2px rgba(0,0,0,.2)
-
-
-.offer--slider
-	height: 590px
+	min-height: 100%
+	height: auto
+	padding-top: 230px 
+	padding-bottom: 440px 
 	position: relative
-	background: #3D8EB9
-	@media (max-width: 600px)
-		height: 500px
+	display: flex
+	align-items: center
+	flex-wrap: wrap
+	background-image: url(../images/main-screen-dragon.png)
+	background-size: 100% 
+	background-position: 50% 10%
+	background-repeat: no-repeat
+	z-index: 1 
+	
+	@media (max-height: 950px) and (min-width: 1200px)
+		padding-top: 200px
+		padding-bottom: 400px  
+		
+	@media (max-height: 900px) and (min-width: 1200px)
+		padding-bottom: 300px 
+		
+	@media (max-height: 850px) and (min-width: 1200px)
+		padding-top: 150px
+		padding-bottom: 250px  
+		
+	@media (max-height: 800px) and (min-width: 1200px)
+		padding-bottom: 200px 
+		
+	@media (max-width: 1199px)
+		padding-top: 150px 
+		padding-bottom: 200px 
+		
+	@media (max-width: 991px)
+		padding-bottom: 50px 
+		
+	@media (max-width: 767px)
+		padding-top: 180px 
+		padding-left: 10px
+		padding-right: 10px
 
-	.slick-track,
-	.slick-list
-		height: 100%
-
-	.slide
-		+flex ($d:column, $ai:center, $j:center)
-		position: absolute
-		left: 0
-		top: 0
+	
+	&:after
+		content: ''
 		width: 100%
-		height: 100%
-		background-position: 50% 50%
-		background-repeat: no-repeat
-		-webkit-background-size: cover
-		-o-background-size: cover
-		background-size: cover
+		height: 170px
+		position: absolute
+		bottom: 0
+		left: 0
+		right: 0
+		background: linear-gradient(to bottom, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0.9) 50%, rgba(255,255,255,1) 100%)
+		z-index: -1 
+	
 
-		@media (max-width: 800px)
-			padding: 0 30px
 
-		h1,
-		h2
-			color: #fff
+	h1
+		font-size: 58px
+		margin-bottom: 18px 
+		
+		@media (max-height: 850px) and (min-width: 1200px)
+			font-size: 52px
+			margin-bottom: 12px  
+			
+		@media (max-height: 800px) and (min-width: 1200px)
+			font-size: 46px
+			margin-bottom: 10px  
+			
+		@media (max-width: 1199px)
 			font-size: 50px
-			font-weight: 700
+			margin-bottom: 15px  
+			
+		@media (max-width: 991px)
+			font-size: 46px
+			
+		@media (max-width: 767px)
+			font-size: 40px  
+			
+		@media (max-width: 575px)
+			font-size: 36px 
+		
+	h2
+		font-weight: 300
+		font-size: 42px  
+		
+		@media (max-height: 850px) and (min-width: 1200px)
+			font-size: 36px 
+			
+		@media (max-height: 800px) and (min-width: 1200px)
+			font-size: 30px 
+			
+		@media (max-width: 1199px)
+			font-size: 34px 
+			
+		@media (max-width: 991px)
+			font-size: 32px
+			
+		@media (max-width: 767px)
+			font-size: 30px
+			
+		@media (max-width: 575px)
+			font-size: 26px   
+		
+	.sign-up-form
+		padding-top: 50px
+		
+		@media (max-height: 850px) and (min-width: 1200px)
+			padding-top: 30px 
+			
+		@media (max-height: 800px) and (min-width: 1200px)
+			padding-top: 20px 
+		
+		@media (max-width: 1199px)
+			padding-top: 30px 
+			
+		@media (max-width: 991px)
 			text-align: center
+			
+			.form-body
+				justify-content: center
 
-			@media (max-width: 1200px)
-				font-size: 40px
+		.form-control
+			width: 280px
+			margin-right: 15px 
+			
 
-			@media (max-width: 800px)
-				font-size: 32px
+	.enter-area
+		@media (max-width: 991px)
+			padding-top: 50px
+			 
+		.enter-dragon-link
+			display: block
+			margin: 0 auto
+			width: 318px
+			max-width: 100% 
+			
+			img
+				display: block
+				max-width: 100% 
+			
+			@media (max-height: 850px) and (min-width: 1200px)
+				width: 270px
+				
+			@media (max-height: 800px) and (min-width: 1200px)
+				width: 250px
+				
+			@media (max-width: 1199px)
+				width: 250px
+			
+		.enter-dragon-afterlink
+			font-style: italic 
+			font-weight: 300
+			font-size: 25px
+			color: #808080  
+			display: block
+			text-align: center
+			
+			@media (max-height: 800px) and (min-width: 1200px)
+				font-size: 22px 
+			
 
-			@media (max-width: 600px)
-				font-size: 30px
 
-		.button
-			margin-top: 16px
+
+	.scroll-down
+		width: 120px
+		height: 120px
+		background-color: $blue
+		border-radius: 50% 
+		position: absolute
+		left: 50%
+		z-index: 5 
+		bottom: 170px
+		transform: translateX(-50%)
+		border: 0
+		cursor: pointer
+		box-shadow: 0 0 0 20px #eff3ff
+		
+		@media (max-height: 950px) and (min-width: 1200px)
+			bottom: 130px
+			
+		@media (max-height: 900px) and (min-width: 1200px)
+			bottom: 60px
+			
+		@media (max-height: 850px) and (min-width: 1200px)
+			width: 90px
+			height: 90px
+			
+		@media (max-width: 1199px)
+			bottom: 20px
+			width: 90px
+			height: 90px
+			
+		@media (max-width: 991px)
+			display: none
+		
+		img
+			height: 16px
+			display: block
+			margin: 0 auto
+			
+
+	.socials
+		position: absolute
+		top: 50%
+		right: 30px
+		transform: translateY(-50%)
+		
+		@media (max-width: 1199px)
+			right: 15px
+			top: 50vh
+			
+		@media (max-width: 575px)
+			right: 5px
+		
+		a
+			display: block
+			height: 20px
+			margin: 15px 0
+			
+			img
+				display: block
+				height: 100%
+				filter: drop-shadow(0 0 10px rgba(0, 0, 0, .1))

@@ -1,0 +1,111 @@
+.team
+	padding: 40px 0	
+	
+	@media (max-width: 991px)
+		padding-bottom: 0
+
+	&-title
+		//font-family: $h
+		margin-bottom: 60px 
+		
+		@media (max-width: 575px)
+			text-align: center
+		 
+		.pre-title
+			font-size: 22px 
+			font-weight: 300
+			line-height: normal 
+			height: auto 
+			
+			@media (max-width: 767px)
+				font-size: 20px 
+			
+		h2
+			font-size: 46px
+			font-weight: 300  
+			
+			@media (max-width: 767px)
+				font-size: 42px
+				
+			@media (max-width: 575px)
+				font-size: 36px 
+			
+
+
+.team-member
+	display: block
+	position: relative
+	background-size: cover
+	background-position: 50% 50%
+	margin-bottom: 75px 
+	background-repeat: no-repeat 
+	width: 100%
+	max-width: 290px
+	margin-left: auto 
+	margin-right: auto  
+	
+	&:after
+		content: ''
+		width: 100%
+		display: block
+		padding-top: 100% 
+		
+	.paint
+		position: absolute
+		top: 0
+		left: 0
+		
+		&:before
+			content: ''
+			position: absolute
+			top: -11px
+			left: -12px
+			width: 49px
+			height: 68px
+			background-image: url(../images/paint.png)
+			background-size: 100% 
+			z-index: 1 
+		
+		&:after
+			content: ''
+			width: 0
+			height: 0
+			border-style: solid
+			border-width: 60px 50px 0 0 
+			border-color: #fff transparent transparent transparent
+			position: absolute
+			top: 0
+			left: 0
+			z-index: 0
+
+	&:before
+		content: ''
+		width: 0
+		height: 0
+		border-style: solid
+		border-width: 0 0 60px 50px
+		border-color: transparent transparent #fff transparent
+		position: absolute
+		bottom: 0
+		right: 0
+		
+
+	.tm-info
+		display: flex
+		align-items: center
+		position: absolute
+		left: 13px
+		bottom: 15px
+		color: #fff 
+		
+		.tm-name
+			padding-right: 15px
+			
+			.name
+				font-weight: 700 
+				font-size: 18px
+				
+			.position
+				font-weight: 300
+				font-size: 14px  
+			 

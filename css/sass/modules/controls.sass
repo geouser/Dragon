@@ -1,36 +1,51 @@
 .btn
     height: 50px
-    left: 50px
     display: inline-block  
+    border-radius: 25px
+    text-transform: uppercase
+    color: #fff
+    border: 0
+    padding: 0 25px
+    cursor: pointer
+    font-size: 14px 
+    padding-top: 17px
+    padding-bottom: 17px  
+    
+    &--blue
+        background-color: $blue 
+        
+    &--brown
+        background-color: $brown-light 
+        font-size: 13px 
+        
+    &--grey
+        background-color: #E5E5E5 
+    
+
+
+
 /* ------------------------------------ */
 /*  SLICK ARROWS  */
 .slick-arrow,
+.slick-arrow:hover,
 .slick-arrow:focus,
-.slick-arrow:active,
-.slick-arrow:hover
+.slick-arrow:active
 	+transition(all, .2s)
-	width: 70px
-	height: 90px
+	width: 160px
+	height: 160px
 	z-index: 10
-	background-color:  peru
-	-webkit-border-radius: 2px
-	border-radius: 2px
-	background-repeat: no-repeat
-	background-position: 50% 50%
-	-webkit-background-size: 23px 20px
-	-o-background-size: 23px 20px
-	background-size: 23px 20px
-
-	@media (max-width: 800px)
-		width: 50px
-		height: 70px
-
-	@media (max-width: 600px)
-		width: 30px
-		height: 50px
-		-webkit-background-size: 16px 16px
-		-o-background-size: 16px 16px
-		background-size: 16px 16px
+	background: none
+	background-color: $bg!important
+	border-radius: 50%
+	box-shadow: 0px 0px 30px 0px rgba(84, 116, 213, 0.31)
+	background-repeat: no-repeat!important
+	background-size: 55px
+	
+	@media (max-width: 767px)
+		width: 80px
+		height: 80px
+		background-size: 20px 
+		background-color: $blue!important 
 
 	&:before
 		display: none
@@ -40,15 +55,35 @@
 
 .slick-next,
 .slick-next:hover,
-.slick-next:focus
+.slick-next:focus,
+.slick-next:active
 	right: 0
-	background-image: url("../images/right-arrow.svg")
+	
+	@media (min-width: 768px)
+		transform: translate(50%, -75%)
+		background-position: 15% 50%
+		background-image: url("../images/next-arrow.png")!important
+		
+	@media (max-width: 767px)
+		transform: translate(50%, -50%)
+		background-image: url("../images/right-arrow.svg")!important
+		background-position: 25% 50%
 
 .slick-prev,
 .slick-prev:hover,
-.slick-prev:focus
+.slick-prev:focus,
+.slick-prev:active
 	left: 0
-	background-image: url("../images/left-arrow.svg")
+	
+	@media (min-width: 768px)
+		transform: translate(-50%, -25%)
+		background-position: 85% 50%
+		background-image: url("../images/prev-arrow.png")!important
+		
+	@media (max-width: 767px)
+		transform: translate(-50%, -50%)
+		background-image: url("../images/left-arrow.svg")!important
+		background-position: 75% 50%
 
 
 .input.file
