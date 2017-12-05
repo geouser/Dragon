@@ -135,6 +135,36 @@ jQuery(document).ready(function($) {
 
 
 
+
+
+    i=$("path#line1"),
+    d=$("path#line2"),
+    r=$("path#line3");
+
+    $('.svg-lines').onScreen({
+       container: window,
+       direction: 'vertical',
+       doIn: function() {
+            var c=(new TimelineMax).add(TweenMax.to(i, .9, {strokeDashoffset:2e3, ease:Linear.easeNone})).
+                                    add(TweenMax.to(d, .9, {strokeDashoffset:2e3, ease:Linear.easeNone})).
+                                    add(TweenMax.to(r, .9, {strokeDashoffset:2e3, ease:Linear.easeNone})).
+                                    add(TweenMax.from("path", 0, {strokeDashoffset:0, stroke:"#BD8E41", ease:Linear.easeNone}), 0);
+       },
+       doOut: function() {
+            var c=(new TimelineMax).add(TweenMax.to(i, 0, {strokeDashoffset:1e3, ease:Linear.easeNone})).
+                                    add(TweenMax.to(d, 0, {strokeDashoffset:1e3, ease:Linear.easeNone})).
+                                    add(TweenMax.to(r, 0, {strokeDashoffset:1e3, ease:Linear.easeNone})).
+                                    add(TweenMax.from("path", 0, {strokeDashoffset:0, stroke:"#BD8E41", ease:Linear.easeNone}), 0);
+       },
+       tolerance: 0,
+       throttle: 50,
+       toggleClass: 'onScreen',
+       lazyAttr: null,
+       debug: false
+    });
+
+
+
     /*---------------------------
                                   Form submit
     ---------------------------*/
