@@ -32,9 +32,9 @@ jQuery(document).ready(function($) {
 
             setTimeout(function(){
                 $('.preloader').addClass('complete')
-            }, 4000);
+            }, 5500);
 
-        }, 1500);
+        }, 1000);
     }
 
 
