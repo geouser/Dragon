@@ -25,6 +25,14 @@ function exist(el){
 
 jQuery(document).ready(function($) {
 
+    wow = new WOW(
+        {
+          offset:       200,         
+          mobile:       false       
+        }
+    )
+    wow.init();
+
     var mi = 0;
     $('.hidden-menu__nav li').each(function(index, el) {
       $(this).css({
