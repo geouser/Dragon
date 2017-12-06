@@ -10,7 +10,7 @@
 	align-items: center
 	justify-content: center
 	z-index: 110
-	background-color: $blue
+	background-color: $bg
 	text-align: center
 	transition: all 0.6s ease
 	
@@ -26,7 +26,7 @@
 		justify-content: center
 		font-size: 160px
 		font-weight: 700  
-		color: #1D7FB8
+		color: #fff
 		
 		span
 			position: relative
@@ -36,7 +36,7 @@
 				position: absolute
 				left: 0
 				width: 0
-				color: #fff
+				@extend .text-gradient
 				white-space: nowrap
 				overflow: hidden
 				transition: width 3s ease
