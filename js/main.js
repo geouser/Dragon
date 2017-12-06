@@ -25,6 +25,7 @@ function exist(el){
 
 jQuery(document).ready(function($) {
 
+
     wow = new WOW(
         {
           offset:       200,         
@@ -32,6 +33,17 @@ jQuery(document).ready(function($) {
         }
     )
     wow.init();
+
+    if ( exist('.preloader') ) {
+        setTimeout(function(){
+            $('.preloader').addClass('loading')
+
+            setTimeout(function(){
+                $('.preloader').addClass('complete')
+            }, 4000);
+
+        }, 1500);
+    }
 
     var mi = 0;
     $('.hidden-menu__nav li').each(function(index, el) {
