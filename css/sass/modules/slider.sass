@@ -69,11 +69,27 @@
 			transform: rotate(-4deg)
 			font-weight: 300
 			padding: 10px 20px
-			background-color: #fff
+			//background-color: #fff
 			color: #3c3c3c
 			font-size: 23px  
-			box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2)
+			//box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2)
+			//filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.2))
 			border-radius: 40px
+			z-index: 1 
+			
+			&:after
+				content: ''
+				width: 118%
+				height: 280%
+				position: absolute
+				top: 50%
+				left: 50%
+				transform: translate(-50%, -50%)
+				background-image: url(../images/cloud.png)
+				background-size: 100% 100%
+				background-repeat: no-repeat 
+				//filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.2))
+				z-index: -1 
 			
 			@media (max-width: 1199px)
 				bottom: 90px
@@ -107,7 +123,7 @@
 			background-position: 55% 50% 
 			background-size: 35px
 			background-repeat: no-repeat 
-			box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.75)
+			box-shadow: 0px 0px 100px 0px rgba(0, 0, 0, 0.50)
 			
 			@media (max-width: 991px)
 				width: 100px

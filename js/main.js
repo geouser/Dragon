@@ -29,7 +29,7 @@ jQuery(document).ready(function($) {
     wow = new WOW(
         {
           offset:       200,         
-          mobile:       false       
+          mobile:       true      
         }
     )
     wow.init();
