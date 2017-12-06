@@ -32,8 +32,9 @@
         background-color: #E5E5E5 
         border-color: #E5E5E5 
         &:hover
+            border-color: $brown-light 
             background-color: transparent
-            color: #E5E5E5 
+            color: $brown-light 
     
 
 
@@ -159,3 +160,5 @@
         img
             max-width: 40px 
             display: block
+            @media (max-width: 991px)
+                max-width: 20px 

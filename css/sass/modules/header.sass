@@ -71,10 +71,6 @@
 			img
 				max-width: 100%
 				display: block 
-				
-		@media (max-width: 767px)
-			margin-left: auto 
-			margin-right: auto 
 
 
 .headroom--unpinned
@@ -105,6 +101,8 @@
 				
 			@media (max-width: 480px)
 				font-size: 13px 
+			@media (max-width: 400px)
+				font-size: 11px 
 
 			a
 				color: #606060
@@ -122,6 +120,7 @@
 	top: 0
 	left: 0
 	height: 100%
+	overflow: auto
 	width: 100%  
 	background-color: rgba(0,0,0,.9) 
 	z-index: 100 
@@ -135,6 +134,10 @@
 	transition: all .4s  
 	h2
 		font-size: 42px  
+		@media (max-width: 991px)
+			font-size: 32px 
+		@media (max-width: 767px)
+			font-size: 28px 
 	&__nav
 		list-style-type: none
 		li
@@ -146,6 +149,10 @@
 			-ms-transform: matrix3d(1, 0, 0, 0, 0, 0, 1, 0, 0, -1, 0, 0, -35, 0, 0, 1)
 			-o-transform: matrix3d(1, 0, 0, 0, 0, 0, 1, 0, 0, -1, 0, 0, -35, 0, 0, 1)
 			transform: matrix3d(1, 0, 0, 0, 0, 0, 1, 0, 0, -1, 0, 0, -35, 0, 0, 1) 
+			@media (max-width: 991px)
+				margin: 10px 0 
+			@media (max-width: 767px)
+				text-align: center
 			a
 				color: #FFF
 				font-size: 36px
@@ -153,6 +160,10 @@
 				transition: all .2s 
 				position: relative
 				overflow: hidden
+				@media (max-width: 991px)
+					font-size: 28px 
+				@media (max-width: 767px)
+					font-size: 24px 
 				&:hover
 					&:after
 						width: 100%  !important
@@ -179,6 +190,8 @@
 		.btn
 			margin-top: 20px
 			margin-bottom: 40px 
+			@media (max-width: 991px)
+				margin-bottom: 30px 
 		h2:not(first-child)
 			margin-top: 20px 
 			font-weight: 400 

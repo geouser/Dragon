@@ -99,3 +99,23 @@ body
 	-webkit-background-clip: text
 	-webkit-text-fill-color: transparent
 	color: $brown-light
+	
+.hide-wrap
+	overflow: hidden
+	&--dectitle
+		padding-top: 30px 
+	& > *
+		transition: all .6s ease-out
+		transform: translateY(200%) 
+	&--left
+		& > *
+			transform: translateX(-100%) 
+	&[data-delay=".1s"]
+		& > *
+			transition-delay: .1s 
+	&[data-delay=".2s"]
+		& > *
+			transition-delay: .2s 
+	&.animated
+		& > *
+			transform: translateY(0%) translateX(0%) 

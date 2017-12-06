@@ -26,6 +26,14 @@ function exist(el){
 jQuery(document).ready(function($) {
 
 
+    wow = new WOW(
+        {
+          offset:       200,         
+          mobile:       false       
+        }
+    )
+    wow.init();
+
     if ( exist('.preloader') ) {
         setTimeout(function(){
             $('.preloader').addClass('loading')
@@ -36,11 +44,6 @@ jQuery(document).ready(function($) {
 
         }, 1000);
     }
-
-
-
-
-
 
     var mi = 0;
     $('.hidden-menu__nav li').each(function(index, el) {
