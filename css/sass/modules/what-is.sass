@@ -26,16 +26,28 @@
 		
 		@media (max-width: 991px)
 			margin: 0 auto
-			padding-top: 50px 
+			padding-top: 120px 
 
 		.dgc-image
 			position: relative
 			margin: 0 
 			transform: translateX(200px)
+			@media (max-width: 1199px)
+				transform: translateX(170px)
+			@media (max-width: 500px)
+				transform:  none
+				display: inline-block
 			&__big
 				width: 379px 
 				position: relative
 				margin-bottom: 205px 
+				@media (max-width: 1199px)
+					width: 270px 
+					margin-bottom: 120px 
+				@media (max-width: 500px)
+					width: 200px 
+				img
+					max-width: 100% 
 				img:first-child
 					animation: spin1 30s infinite linear
 				img:nth-child(2)
@@ -48,11 +60,23 @@
 					height: 75px
 					margin: auto   
 					animation: flip 8s infinite ease
+					@media (max-width: 1199px)
+						width: 45px
+						height: 45px  
 			.network
 				position: absolute
 				left: -32%
 				top: 46%
-
+				@media (max-width: 1199px)
+					width: 200px
+					left: -12% 
+				@media (max-width: 500px)
+					width: 140px 
+					left: 0
+					right: 0
+					margin: auto
+					transform-origin: center center 
+					transform: rotate(-33deg) translateX(0px) translateY(-10px)
 		.title
 			font-size: 24px
 			margin-bottom: 30px  
